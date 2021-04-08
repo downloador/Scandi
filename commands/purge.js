@@ -15,7 +15,7 @@ module.exports = {
           vars.channel.send("Tog bort " + number + " meddelanden")
         })
       } else {
-       msg.reply("Du måste ange ett numer) 
+       msg.reply("Du måste ange ett nummer") 
       }
     }
   }
