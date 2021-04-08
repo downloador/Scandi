@@ -12,7 +12,7 @@ module.exports = {
           return;
         }
         vars.msg.channel.bulkDelete(number).then( () => {
-          vars.msg.channel.send("<@" + vars.author.id + ">, Tog bort " + number + " meddelanden")
+          vars.msg.channel.send("<@" + vars.author.id + ">, Tog bort " + number + " meddelanden").delete(3000)
         })
       } else {
        vars.msg.reply("Du måste ange ett nummer") 
