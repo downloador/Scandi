@@ -86,7 +86,7 @@ function createVars(u1,command) {
 }
 
 client.once('ready', () => {
-   client.user.setActivity('<dina samtal.>', { type: 'LISTENING' });
+   client.user.setActivity('dina samtal.', { type: 'LISTENING' });
 })
 
 client.on('message', msg => {
