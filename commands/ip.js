@@ -5,7 +5,7 @@ module.exports = {
 	execute(vars) {
         var result = vars.canExecuteCommand(this,vars)
         if (result === true) {
-            vars.msg.reply(" Direct Connect IP:n är **connect 83.233.127.52:30140**. ")
+            vars.msg.reply("Direct Connect IP:n är **connect 83.233.127.52:30140**.")
         }
 	},
 };
