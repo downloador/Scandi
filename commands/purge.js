@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'ping',
+  name: 'purge',
   cooldown: 3,
   level: 3,
   execute(vars) {
