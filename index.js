@@ -15,11 +15,8 @@ for (const file of commandFiles) {
 
 var cooldownList = {}
 
-console.log(process.env)
-
 var config = {
     prefix: "-",
-    token: "ODI5NTA3NjcxOTE5OTUxODgy.YG5JOA.wChx2y2Ahzk7z7p0LkGjpZmSIpk"
 }
 
 var permissionsLevel = {
@@ -102,4 +99,4 @@ client.on('message', msg => {
     }
 });
 
-client.login(config.token);
+client.login(process.env.TOKEN);
