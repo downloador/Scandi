@@ -85,6 +85,10 @@ function createVars(u1,command) {
     return vars;
 }
 
+client.once('ready', () => {
+   client.user.setActivity('<dina samtal.>', { type: 'LISTENING' });
+})
+
 client.on('message', msg => {
     if (msg.content.startsWith(config.prefix)) {
         var command = msg.content.split(" ")[0]
