@@ -12,3 +12,4 @@ I så fall om du kan programmera i JavaScript eller vill bidra så kan du öppna
 Botten skapad av .down#0418, med hjälp av SvenBro#8244
 
 ## Bidragsgivare
+För tillfället saknas bidragsgivare.
