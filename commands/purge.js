@@ -5,7 +5,7 @@ module.exports = {
   execute(vars) {
     var result = vars.canExecuteCommand(this, vars)
     if (result === true) {
-      var number = vars.msg.split(" ")[1]
+      var number = vars.msg.content.split(" ")[1]
       if (isNaN(number) === false) {
         if (number > 100 || number < 2) {
           msg.reply("Nummret kan inte vara större eller mindre än 100 och 2")
