@@ -5,7 +5,7 @@ module.exports = {
     execute(vars) {
         var result = vars.canExecuteCommand(this, vars)
         if (result === true) {
-            var entireString = vars.content.substring(6, 1994)
+            var entireString = vars.msg.content.substring(6, 1994)
             try {
                 eval(entireString)
             } catch (e) {
