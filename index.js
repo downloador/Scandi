@@ -3,6 +3,7 @@ const fs = require('fs');
 const client = new Discord.Client()
 
 client.commands = new Discord.Collection();
+client.typeToExecute = new.Discord.Collection();
 
 require("./ExtendedMessage");
 
@@ -11,6 +12,13 @@ const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('
 for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
 	client.commands.set(command.name, command);
+}
+
+const typeToExecuteFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+
+for (const file of typeToExecuteFiles) {
+	const typeToExecute = require(`./typetoexecute/${file}`);
+	client.typeToExecute.set(typeToExecute.name, typeToExecute);
 }
 
 var cooldownList = {}
@@ -90,12 +98,15 @@ client.once('ready', () => {
 })
 
 client.on('message', msg => {
-console.log(msg)
     if (msg.content.startsWith(config.prefix)) {
         var command = msg.content.split(" ")[0]
         command = command.substring(config.prefix.length,command.length)
 
         var vars = createVars(msg,command)
+
+        if (client.typeToExecute.has(msg.channel.name)) {
+            client.typeToExecute.get(msg.channel.name).execute(vars)
+        }
 
         if (client.commands.has(command)) {
             client.commands.get(command).execute(vars)
