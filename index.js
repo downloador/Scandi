@@ -14,7 +14,7 @@ for (const file of commandFiles) {
 	client.commands.set(command.name, command);
 }
 
-const typeToExecuteFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+const typeToExecuteFiles = fs.readdirSync('./typetoexecute').filter(file => file.endsWith('.js'));
 
 for (const file of typeToExecuteFiles) {
 	const typeToExecute = require(`./typetoexecute/${file}`);
