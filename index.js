@@ -104,7 +104,9 @@ client.on('message', msg => {
 
         var vars = createVars(msg,command)
 
+	console.log(msg.channel.name,client.typeToExecute)
         if (client.typeToExecute.has(msg.channel.name)) {
+		console.log(1)
             client.typeToExecute.get(msg.channel.name).execute(vars)
         }
 
