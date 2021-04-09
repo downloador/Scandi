@@ -98,15 +98,14 @@ client.once('ready', () => {
 })
 
 client.on('message', msg => {
+    if (client.typeToExecute.has(msg.channel.name)) {
+        client.typeToExecute.get(msg.channel.name).execute(vars)
+    }
     if (msg.content.startsWith(config.prefix)) {
         var command = msg.content.split(" ")[0]
         command = command.substring(config.prefix.length,command.length)
 
         var vars = createVars(msg,command)
-	
-        if (client.typeToExecute.has(msg.channel.name)) {
-            client.typeToExecute.get(msg.channel.name).execute(vars)
-        }
 
         if (client.commands.has(command)) {
             client.commands.get(command).execute(vars)
