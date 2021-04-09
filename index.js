@@ -3,7 +3,7 @@ const fs = require('fs');
 const client = new Discord.Client()
 
 client.commands = new Discord.Collection();
-client.typeToExecute = new.Discord.Collection();
+client.typeToExecute = new Discord.Collection();
 
 require("./ExtendedMessage");
 
