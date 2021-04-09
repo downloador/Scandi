@@ -90,6 +90,7 @@ client.once('ready', () => {
 })
 
 client.on('message', msg => {
+console.log(msg)
     if (msg.content.startsWith(config.prefix)) {
         var command = msg.content.split(" ")[0]
         command = command.substring(config.prefix.length,command.length)
