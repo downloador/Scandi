@@ -5,7 +5,7 @@ module.exports = {
   execute(vars) {
     var result = vars.canExecuteCommand(this, vars)
     if (result === true) {
-      vars.msg.inlineReply("Direct Connect IP:n (genom konsollen (F8)) är `83.233.127.52:30140`. ")
+      vars.msg.inlineReply("För att connecta till servern trycker du på `F8` och skriver `connect 83.233.127.52:30140`")
     }
   }
 };
