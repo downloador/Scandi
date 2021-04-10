@@ -99,8 +99,10 @@ client.once('ready', () => {
 
 client.on('message', msg => {
     if (client.typeToExecute.has(msg.channel.name)) {
-	var vars = createVars(msg,command)
-        client.typeToExecute.get(msg.channel.name).execute(vars)
+	if (msg.author.id != "829507671919951882") {
+	    var vars = createVars(msg,command)
+            client.typeToExecute.get(msg.channel.name).execute(vars)
+	}
     }
     if (msg.content.startsWith(config.prefix)) {
         var command = msg.content.split(" ")[0]
