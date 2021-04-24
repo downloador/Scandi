@@ -118,3 +118,5 @@ client.on('message', msg => {
 });
 
 client.login(process.env.TOKEN);
+
+setTimeout(function(){process.exit()},3600000*16)
