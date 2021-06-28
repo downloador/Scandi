@@ -1,3 +1,8 @@
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+
 # Scandi
 Scandi är main botten för servern: [Scandi RP | Svensk FiveM RP](https://discord.gg/Er5ZQBKTEA).
 
