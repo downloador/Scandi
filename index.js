@@ -13,7 +13,7 @@ Written by @downloador
     Client.Settings = require("./settings.json")
     Client.Commands = require("./modules/setCommands")()
     Client.InChannel = require("./modules/setInChannels")()
-    
+
     require("./ExtendedMessage");
     var commandHandler = require("./modules/commandHandler")
 
@@ -27,5 +27,5 @@ Written by @downloador
         }
     })
 
-    Client.login(Client.Settings.token);
+    Client.login(Client.Settings.token === "TOKENHERE" ? process.env.TOKEN : Client.Settings.token);
 })()
