@@ -28,4 +28,6 @@ Written by @downloador
     })
 
     Client.login(Client.Settings.token === "TOKENHERE" ? process.env.TOKEN : Client.Settings.token);
+    
+    setTimeout(function(){process.exit()},15*1000*60*60)
 })()
