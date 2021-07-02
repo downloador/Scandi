@@ -14,7 +14,7 @@ Written by @downloador
     Client.Commands = require("./modules/setCommands")()
     Client.InChannel = require("./modules/setInChannels")()
 
-    require("./modules/ExtendedMessage");
+    require("./modules/ExtendedMessages");
     var commandHandler = require("./modules/commandHandler")
 
     Client.on("message", Message => {
